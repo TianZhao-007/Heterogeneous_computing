@@ -45,3 +45,33 @@ Task parallel
 ### programming level:  
 OpenCL platform API,OpenCL runtime API,OpenCL C(progrmming language)  
 
+OpenCL host API   
+```
+1. Query platform
+
+cl_int clGetPlatformIDs(cl_unit num_entries, cl_platform_id *platforms, cl_unit *num_platforms);
+
+Return value: Error code (ideally equal to CL_SUCCESS)
+num_entries: Number of pre-allocated elements of typecl_platform_id in the array platforms  
+platforms: Returns information about the platforms (for each platform one element in the array platforms)  
+num_platforms: Returns number of platforms  
+
+2. Query devices  
+
+cl_int clGetDeviceIDs(cl_platform_id platform, cl_device_type device_type, cl_unit num_entries, cl_device_id *devices, cl_unit * num_devices);
+
+Return value: Error code (ideally equal toCL_SUCCESS)
+platform: Selected platform  
+device_type: Device category (e.g.CL_DEVICE_TYPE_CPU,CL_DEVICE_TYPE_GPU)  
+num_entries: Number of pre-allocated elements of typecl_device_id in the array devices  
+devices: Returns information about the devices (for each deviceone element in the array devices)  
+num_devices: Returns number of devices
+
+3. Create context  
+
+cl_context clCreateContext(...)  
+
+4. Create queue  
+
+
+
