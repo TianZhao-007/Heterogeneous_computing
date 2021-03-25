@@ -73,5 +73,24 @@ cl_context clCreateContext(...)
 
 4. Create queue  
 
+```
+A book
 
+P461: The best way to learn OpenCL is actually to learn CUDA first and then map the Open CL features to their CUDA equivalents.
+
+-	What is OpenCL?
+OpenCL is a standardized, cross-platform parallel computing API based on the C language.
+
+-	The aim of OpenCL?
+OpenCL is designed to enable the development of portable parallel applications for systems with heterogenous computing devices.
+
+-	OpenCL consists of two parts:
+	Kernels that execute on one or more OpenCL devices
+	Kernels are typically simple functions that transform input memory objects into output memory objects.
+	OpenCL defines two types of kernels: OpenCL kernels + Native kernels
+
+	A host program that manages the execution of kernels
+-	OpenCL specification: 
+See: www.khronos.org/opencl 
+```
 
