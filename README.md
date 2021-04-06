@@ -95,3 +95,5 @@ OpenCL is designed to enable the development of portable parallel applications f
 See: www.khronos.org/opencl 
 ```
 
+## 线程 thread   
+[简单线程学习](https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html)  
