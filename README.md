@@ -97,3 +97,19 @@ See: www.khronos.org/opencl
 
 ## 线程 thread   
 [简单线程学习](https://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html)  
+
+
+## OCLgrind  
+[Intro](http://imgtec.eetrend.com/d6-imgtec/article/2015-12/6765.html)
+作为其核心，Oclgrind模拟了OpenCL设备如何执行内核。  
+Oclgrind工具有助于调试，该调试在运行时显示不正确的OpenCL API调用和内存访问问题。  
+这在某种程度上独立于任何特定的体系结构，也使其能够发现许多在OpenCL开发期间出现的可移植性问题。  
+通过曝光简单的插件接口，Oclgrind便可以创建各种各样的工具以分析或调试OpenCL内核。  
+
+oclgrind.icd  
+ICD means interface control document (ICD),a document that describes the interface(s) to a system or subsystem.  
+
+liboclgrind-rt-icd.so  
+不同操作系统的动态链接库文件格式稍有不同，Linux称之为共享目标文件（Shared Object），文件后缀为.so  
+[.so编译的相关知识](https://zhuanlan.zhihu.com/p/235551437)  
+
