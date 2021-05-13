@@ -124,7 +124,7 @@ liboclgrind-rt-icd.so
 Example:
 
 **CL Error -5: Failed to read output array!**  
-Error code is -5 and then debug!
+Error code is **-5(CL_OUT_OF_RESOURCES)** and then debug!
 
 
 
