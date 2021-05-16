@@ -1,4 +1,67 @@
-# 1. OpenCl  
+# Docker and linux(runtime)  
+## Docker  
+### docker --version
+Docker version 20.10.2, build 20.10.2-0ubuntu1~20.04.2  
+### when docker hasn't run  
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?  
+### docker run  
+运行容器
+### docker attach  
+主要是查看信息，不推荐进入内部交互  
+### docker build  
+构建镜像的命令  
+### docker commit  
+把当前容器打包为镜像（更推荐Dockerfile）  
+### docker cp  
+复制docker内部文件到宿主机  
+```
+docker cp <containerId>:/file/path/within/container /host/path/target
+```
+### docker diff  
+列出容器内发生变化的文件和目录  
+### docker events  
+实时输出docker服务器端的事件（如容器创建 启动 关闭）  
+### docekr exec  
+进入容器的命令  
+```
+docker exec -it docker_name bash  
+```
+### docker  history  
+查看镜像历史变化  
+### docker images  
+查看docker的本地镜像  
+### docker import  
+导入镜像  
+### docker info  
+查看Docker的信息  
+### docker inspect  
+查看更详细的信息（了解一个image/container的完整构建）  
+### docker kill  
+杀死容器的进程  
+### docker ps  
+查看本地容器信息  
+### docker pull  
+拉取镜像（和git类似）
+### docker push  
+推送镜像  
+### docker rename  
+重命名容器  
+### docker rm  
+删除容器的命令  
+### docker rmi  
+删除镜像  
+### docker search  
+搜索镜像[Click here](https://hub.docker.com/)  
+### docker save/ docker load  
+镜像导入/导出到本地文件系统  
+
+
+
+
+
+
+
+# OpenCl  
 ## what's openCL?  
 OpenCL(open compute language)  
 
