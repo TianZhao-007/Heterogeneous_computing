@@ -2,13 +2,12 @@
 #define VECTOR_SIZE  32
 // NAVIDIA is 32 threads per warp
 
-__kernel void csr(					const unsigned int num_rows,		
-									__global const int * restrict Ap,
-									__global const int * restrict Aj,
-									__global const float * restrict Ax,
-									__global const float * restrict x,
-									__global float * restrict y
-									)
+__kernel void csr(const unsigned int num_rows,		
+		__global const int * restrict Ap,
+		__global const int * restrict Aj,
+		__global const float * restrict Ax,
+		__global const float * restrict x,
+		__global float * restrict y)
 {
 	// get local work-item ID
 	int tid = get_local_id(0);
@@ -21,8 +20,6 @@ __kernel void csr(					const unsigned int num_rows,
 
 	// one row per warp
 	int threadsPerBlock = get_local_size(0) / VECTOR_SIZE;
-
-
 	int row = ( get_global_size(0) * threadsPerBlock ) + (tid / VECTOR_SIZE);
 
 	__local volatile float partialSums[128];
