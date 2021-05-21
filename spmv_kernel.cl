@@ -20,7 +20,7 @@ __kernel void csr(const unsigned int num_rows,
 
 	// one row per warp
 	int threadsPerBlock = get_local_size(0) / VECTOR_SIZE;
-	int row = ( get_global_size(0) * threadsPerBlock ) + (tid / VECTOR_SIZE);
+	int row = ( get_global_id(0) * threadsPerBlock ) + (tid / VECTOR_SIZE);
 
 	__local volatile float partialSums[128];
 	partialSums[tid] = 0;
