@@ -190,5 +190,7 @@ Example:
 Error code is **-5(CL_OUT_OF_RESOURCES)** and then debug!
 
 
-
+## Hardware  
+SSD(solid state drive):  
+[Click here to see haow SSD works](https://www.youtube.com/watch?v=5Mh3o886qpg)
 
