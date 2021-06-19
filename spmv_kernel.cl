@@ -23,7 +23,7 @@ __kernel void csr(const unsigned int num_rows,
 	// get_local_size(0) ->  size_t get_local_size(uint dim)  -> given dim, return the # of work-items in work group
 	// get_gobal_id(0) -> size_t get_gobal_id(uint dim) -> given dim, return the gobal ID of work-item
 	int threadsPerBlock = get_local_size(0) / VECTOR_SIZE;
-	int row = ( get_global_id(0) * threadsPerBlock ) + (tid / VECTOR_SIZE);
+	int row = ( get_group_id(0) * threadsPerBlock ) + (tid / VECTOR_SIZE);
 
 	__local volatile float partialSums[128];
 	partialSums[tid] = 0;
