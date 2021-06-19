@@ -10,6 +10,7 @@ __kernel void csr(const unsigned int num_rows,
 		__global float * restrict y)
 {
 	// get local work-item ID
+	// get_local_id(0) -> size_t get_local_id(uint dim) -> given dim, return the local id of work-item
 	int tid = get_local_id(0);
 
 	// VECTOR_SIZE-1 = 31  
@@ -19,6 +20,8 @@ __kernel void csr(const unsigned int num_rows,
 	int id = tid & (VECTOR_SIZE - 1);
 
 	// one row per warp
+	// get_local_size(0) ->  size_t get_local_size(uint dim)  -> given dim, return the # of work-items in work group
+	// get_gobal_id(0) -> size_t get_gobal_id(uint dim) -> given dim, return the gobal ID of work-item
 	int threadsPerBlock = get_local_size(0) / VECTOR_SIZE;
 	int row = ( get_global_id(0) * threadsPerBlock ) + (tid / VECTOR_SIZE);
 
