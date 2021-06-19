@@ -178,6 +178,8 @@ liboclgrind-rt-icd.so
 [.so编译的相关知识](https://zhuanlan.zhihu.com/p/235551437)  
 
 
+## Work item & work group  
+
 
 
 ## OpenCL debug  
