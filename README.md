@@ -4,6 +4,7 @@
 Docker version 20.10.2, build 20.10.2-0ubuntu1~20.04.2  
 ### when docker hasn't run  
 Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?  
+Solution: sudo service docker start  
 ### docker run  
 运行容器
 ### docker attach  
