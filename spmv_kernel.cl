@@ -20,6 +20,9 @@ spmv_csr_scalar_kernel( __global const float * restrict val,
 }
 
 
+/************************************************************************/
+// warp-level programming
+
 #define VECTOR_SIZE  32
 // NAVIDIA is 32 threads per warp
 
