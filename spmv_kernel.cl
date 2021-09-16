@@ -1,3 +1,24 @@
+// one work-item process a row of matrix
+__kernel void
+spmv_csr_scalar_kernel( __global const float * restrict val,
+	__global const float * restrict vec,
+	__global const int * restrict cols,
+	__global const int * restrict ptr,
+	const int dim, __global float * restrict out){
+	
+	int row = get_global_id(0);
+	if (row < dim) {
+		float temp=0;
+	int start = ptr[row];
+	int end = ptr[row+1];
+	for (int j = start; j < end; j++) {
+		int col = cols[j];
+		temp += val[j] * vec[col];
+		}
+	out[row] = temp;
+}
+}
+
 
 #define VECTOR_SIZE  32
 // NAVIDIA is 32 threads per warp
